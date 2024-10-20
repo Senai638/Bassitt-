@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+body{
+    background-color: #fff;
+    font-family: "Roboto", sans-serif;
+}
+
+/*Estilização Inínio*/
+#cabecalho{
+    width: 100%;
+    height: 70px;
+    background-color: #181818;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;/*Propriedade que fazz com que o elemento venha se sobrepor sobre os outros*/
+}
+
+.cabecalho_menu{
+    width: 100%;
+    max-width: 1255px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.menu_lista{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.menu_lista a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 1.20rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.menu_lista li:hover{
+    border-top:2px solid #ddd;
+    border-bottom:2px solid #ddd ;
+}
+
+/*Estilização Final*/
+
+#inicio{
+    width: 100%;
+    height: calc(100vh - 70px); /*Servir para diminuir a diferença do height do cabeçalho*/
+    background-color: cadetblue;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.inicio_principal{
+    width: 100%;
+    max-width:1255px;
+    display: flex;
+    align-items: center;
+}
+
+.inicio_principal_titulos{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.inicio_principal_titulos h1{
+    color: #fff;
+    font-size: 3.37rem;
+}
+
+.inicio_principal_titulos span{
+    font-size: 1.2rem;
+    font-style: italic;
+    color: black;
+    cursor: pointer;
+}
+
+.inicio_principal_titulos a{
+    cursor: auto;
+}
+
+.inicio_principal_titulos button{
+    background-color: #fff;
+    border: none;
+    padding: 14px;
+    font-size: 1.12rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:0.7s;/*Propriedade que vai atuar mudança para o elemento*/
+}
+
+.inicio_principal_titulos button:hover{
+    transform: scale(1.1);/*Tem sentido de transformar o elemento, alterando a sua escala, ou seja, ou seu tamanho*/
+}
+/*Fim da estilizaçaõ do main*/
+
+/*Início estlização sobre*/
+#sobre{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+}
+
+.sobre_principal{
+    width: 100%;
+    height: 55vh;
+    max-width: 1255px;
+    display: flex;
+    justify-content:flex-start;
+
+}
+
+.sobre_principal_esquerdo{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sobre_principal_esquerdo h1{
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+}
+
+.sobre_principal_esquerdo p{
+    text-align: justify;
+    font-size: 1,5rem;
+}
+
+.sobre_principal_direito{
+    display: flex;
+    width: 40%;
+}
+
+.sobre_principal_direito img{
+    width: 100%;
+    border-radius: 8px;
+    margin-left: 40px;
+}
+
+/*fim da estilização sobre*/
+
+/*nício estlização projetos*/
+#projetos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.projetos_principal{
+    width: 100%;
+    max-width: 1255px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.projetos_principal_titulos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.projetos_principal_titulos h1{
+    font-size: 2rem;
+    font-style: italic;
+}
+
+
+.projetos_principal_titulos span{
+    font-size: 1.2rem;
+    font-style: oblique;
+}
+
+.projetos_principal_imagens{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.projetos_principal_imagens img{
+    width: 30%;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.8s;
+}
+
+.projetos_principal_imagens img:hover{
+    opacity: 1;
+}
+
+#rodape {
+    width: 100%;
+    background-color: #181818;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.rodape_principal {
+    max-width: 1255px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rodape_contato {
+    margin-top: 10px;
+}
+
+.rodape_contato a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.rodape_contato a:hover {
+    text-decoration: underline;
+}
+
+.rodape_redes {
+    margin-top: 10px;
+}
+
+.rodape_redes a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.rodape_redes a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 540px) {
+    .rodape_redes a {
+        font-size: 0.9rem;
+    }
+}
+    
+
+
+.projetos_principal button{
+    background-color: #181818;
+    color: #fff;
+    width: 185px;
+    height: 50px;
+    border-radius: 8px;
+
+}
+
+.projetos_principal a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#rodape{
+    width: 100%;
+    background-color: #181818;
+    margin-top: 40px;
+    padding: 25px;
+}
+
+
+.rodape_principal{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+/*Fim radapé*/
+
+/*Início Reponsividade*/
+
+@media(max-width: 1350px){
+    .cabecalho_menu{
+        justify-content: center;
+    }
+
+    .inicio_principal{
+        justify-content: center;
+    }
+}
+
+@media(max-width: 1024px){
+    .sobre_principal{
+        align-items: center;
+    }
+
+    .sobre_principal_esquerdo{
+        display: flex;
+        width: 47%;
+        height: 47vh;
+    }
+
+    .obre_principal_esquerdo{
+        width: 50%;
+    }
+}
+
+@media(max-width: 540px){
+    .menu_lista a{
+        font-size:1rem;
+    }
+
+    .inicio_principal_titulos h1{
+       font-size: 2.20rem;
+    }
+
+    .inicio_principal_titulos span{
+        font-size: 1.10rem;
+    }
+
+    .inicio_principal_titulos button{
+        padding: 3.5%;
+        font-size: 1rem;
+    }
+
+    .sobre_principal{
+        flex-direction: column;
+        padding:3%;
+        height: 65%;
+        justify-content: flex-start;
+        gap: 50px;
+        overflow: auto;
+    }
+
+    .sobre_principal_direito{
+        width: 40%;
+        height: 30vh;
+    }
+
+    .sobre_principal_direito img{
+        width: 100%;
+
+    }
+
+    .sobre_principal_esquerdo{
+        width: 85%;
+        height: 50vh;
+
+    }
+
+    .sobre_principal_esquerdo h1{
+        font-size: 1.5rem;
+    }
+
+    .sobre_principal_esquerdo p{
+        text-align: justify;
+        font-size: 1rem;
+    }
+
+    /*Meu projetos*/
+
+    #projetos{
+        margin-top: 15%;
+
+    }
+
+    .projetos_principal{
+        width: 100%;
+        max-width: 1255px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+
+    .projetos_principal_titulos h1{
+        font-size: 1.3rem;
+    }
+
+
+    .projetos_principal_titulos span{
+        font-size: 1rem;
+    }
+
+}
+
+
+@media(max-width: 375px){
+    #projetos{
+        margin-top: 30%;
+    }
+}
+</style>
+<body>
+    <!--Início cabeçalho-->
+    <header id="cabecalho">
+        <nav class="cabecalho_menu">
+            <ul class="menu_lista">
+                <li><a href="#inicio">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Fim do cabeçalho-->
+
+    <!--Início maim-->
+    <main id="inicio">
+        <div class="inicio_principal">
+            <div class="inicio_principal_titulos">
+                <h1>Olá,<br>seja bem-vindo</h1>
+                <span>Crie soluções para o seu negócio!</span>
+                <br>
+                <a href="#">
+                    <button>Veja meus projetos 👇</button>
+                </a>
+            </div>
+        </div>
+    </main>
+    <!--Fim do início-->
+
+    <!--Início Sobre-->
+    <section id="sobre">
+        <div class="sobre_principal">
+            <div class="sobre_principal_esquerdo">
+                <h1>Sobre</h1>
+
+                <p>
+                    Na Scoundrel, somos especialistas em usinagem e decoração, dedicando-nos a transformar ideias em produtos de alta qualidade. Com anos de experiência no setor, nossa equipe é composta por profissionais apaixonados e comprometidos com a excelência.
+                </p>
+                <br>
+                <p>
+                    Utilizamos tecnologia de ponta e processos inovadores para garantir precisão e acabamento impecável em cada peça. Nossos serviços vão desde a usinagem de componentes industriais até a criação de itens decorativos personalizados, atendendo às necessidades de nossos clientes com criatividade e eficiência.
+                </p>
+            </div>
+
+            <div class="sobre_principal_direito">
+                <img src="https://oxifix.com.br/wp-content/uploads/2024/07/operador-de-cnc-900-x-600-px.png" alt="homem trabalhano">
+            </div>
+        </div>
+    </section>
+    <!--Fim do sobre-->
+
+    <!--Início projetos-->
+    <section id="projetos">
+        <div class="projetos_principal">
+            <div class="projetos_principal_titulos">
+                <h1></h1>
+                <span>Conheça meus útimos projetos:</span>
+            </div>
+            <div class="projetos_principal_imagens">
+                <img src="https://debora.saaracomunicacao.com.br/wp-content/uploads/2024/03/2280591-3.jpeg.webp" alt="Foto do Projetos1">
+                <img src="https://www.kare-click.fr/119235-xxl_default/deco-visage-main-doree-kare-design.jpg" alt="Foto do Projetos2">
+                <img src="https://ae01.alicdn.com/kf/S6f4710e034054284a8b94bb63b1cd529O.jpg_960x960.jpg" alt="Foto do Projetos3">
+                <img src="https://www.kare.pt/70747-large_default/decoracao-de-parede-beetle.jpg" alt="Foto do Projetos4">
+                <img src="https://m.media-amazon.com/images/I/71EUarRi46L._AC_UF894,1000_QL80_.jpg" alt="Foto do Projetos5">
+                <img src="https://media.adeo.com/mkp/40c12c63d91a265658747caa2369443a/media.jpg?width=650&height=650&format=jpg&quality=80&fit=bounds" alt="Foto do Projetos7">
+            </div>
+            <button><a href="#projetos">Faça um orçamento</a></button> 
+        </div>
+    </section>
+    <!--Fim projetos-->
+
+    <!-- Início Rodapé -->
+<footer id="rodape">
+    <div class="rodape_principal">
+        <span><strong>Scoundrel</strong> - Todos os direitos reservados</span>
+        <div class="rodape_contato">
+            <p><strong>Contato:</strong> <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></p>
+            <p><strong>Localização:</strong> Rua Exemplo, 123, Cidade, Estado</p>
+            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/seuusuario" target="_blank">@seuusuario</a></p>
+        </div>
+        <div class="rodape_redes">
+            <a href="https://www.instagram.com/seuusuario" target="_blank">Instagram</a>
+        </div>
+    </div>
+</footer>
+<!-- Fim Rodapé -->
+    
+    
+</body>
+  </html>
